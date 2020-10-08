@@ -1,0 +1,25 @@
+
+<div class="container">
+<table class="table table-secondary table-borderless table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">User Role</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Remove User</th>
+        <th scope="col">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="table table-light" *ngFor="let user of users">
+        <td>{{user.userId}}</td>
+        <td>{{user.userRole}}</td>
+        <td>{{user.userName}}</td>
+        <td><button class="btn btn-danger" (click)="removeUser(user.userId)">Remove</button></td>
+        <td><button class="btn btn-info" (click)="updateUser(user.userId)">Update</button></td>
+      </tr>
+    </tbody>
+  </table>
+ 
+ 
+</div>
